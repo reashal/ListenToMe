@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* 子绝父相 */
+    overflow: hidden;
+    /* 防止撑开盒子 */
+}
+
+body {
+    background-image: linear-gradient(to right, #ec6fa3, #2f4af2);
+}
+
+.box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* box铺满屏幕,需要html和body取消边距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 盒子内部水平垂直居中对齐 */
+    /* margin: auto; */
+}
+
+.box .about {
+    position: relative;
+    width: 70%;
+    max-width: 750px;
+    background-color: rgba(219, 245, 245, 0.1);
+    padding: 1%;
+    overflow: hidden;
+}
+
+.box .imgbox {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(236, 111, 163, .6);
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.left,
+.right {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.right {
+    right: 0;
+}
+
+.left .leftCircle,
+.right .rightCircle {
+    width: 50px;
+    height: 100px;
+    background-color: rgb(255, 255, 255, .4);
+}
+
+.left .leftCircle {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    transform-origin: right center;
+}
+
+.right .rightCircle {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform-origin: left center;
+}
+
+.imgbox .bgAva {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+}
+
+
+.box #ava {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    margin: 0 0;
+    border-radius: 50%;
+}
+
+#ava:hover {
+    cursor: pointer;
+    content: url("../images/reashal.gif");
+}
+
+#btn {
+    position: absolute;
+    display: none;
+    margin: auto;
+    z-index: 3;
+    left: 38px;
+    bottom: -4px;
+    font-size: 16px !important;
+    color: rgb(39, 244, 220);
+}
+
+#reashal,
+#aboutme,
+#ctr {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 33px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#aboutme {
+    display: none;
+}
+
+.fgx {
+    height: 2px;
+    background-color: rgb(255, 255, 255, .7);
+}
+
+.icon {
+    margin-bottom: -12px;
+}
+
+#abo {
+    cursor: pointer;
+}
+
+.icon li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.iconfont {
+    font-size: 22px !important;
+}
+
+i:hover {
+    color: #ec6fa3;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    background-color: #e1e5eb;
+    opacity: 0.4;
+    padding: 6px;
+
+}
+
+.footer p {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+ul a,
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#music {
+    display: none;
+}
